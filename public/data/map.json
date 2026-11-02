@@ -1,0 +1,1603 @@
+{
+ "source": "dl_midtown_d",
+ "cell": 0.5,
+ "units": "meters, Y-up (Source 2 Viewer glTF frame)",
+ "bounds": {
+  "min": [
+   -303.58074951171875,
+   -52.01919937133789,
+   -339.5196838378906
+  ],
+  "max": [
+   319.836669921875,
+   185.68138122558594,
+   275.7464599609375
+  ]
+ },
+ "vertices": 1882889,
+ "triangles": 3929359,
+ "landmarks": [
+  {
+   "kind": "base",
+   "entity": "trigger_team_base",
+   "min": [
+    -22.76,
+    -19.51,
+    -30.89
+   ],
+   "max": [
+    22.76,
+    -3.45,
+    30.89
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    26.01,
+    -9.75,
+    17.07
+   ],
+   "max": [
+    30.07,
+    18.49,
+    21.13
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -30.07,
+    -9.75,
+    -21.13
+   ],
+   "max": [
+    -26.01,
+    18.59,
+    -17.07
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -6.5,
+    -13,
+    30.07
+   ],
+   "max": [
+    6.5,
+    -3.25,
+    39.01
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -6.5,
+    -13,
+    -39.01
+   ],
+   "max": [
+    6.5,
+    -3.25,
+    -30.07
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -32.51,
+    -19.51,
+    -30.07
+   ],
+   "max": [
+    32.51,
+    4.88,
+    30.07
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -16.26,
+    6.91,
+    -102.21
+   ],
+   "max": [
+    -12.19,
+    27.64,
+    -98.15
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -78.84,
+    10.16,
+    -120.7
+   ],
+   "max": [
+    -73.96,
+    34.14,
+    -115.82
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -91.44,
+    9.75,
+    -106.48
+   ],
+   "max": [
+    -86.56,
+    34.14,
+    -101.6
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -29.46,
+    6.5,
+    -118.47
+   ],
+   "max": [
+    -24.59,
+    30.48,
+    -113.59
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -56.9,
+    6.86,
+    -83.62
+   ],
+   "max": [
+    -53.64,
+    26.16,
+    -78.74
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -60.96,
+    6.5,
+    160.93
+   ],
+   "max": [
+    -56.08,
+    26.82,
+    165.81
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    61.77,
+    6.3,
+    170.28
+   ],
+   "max": [
+    66.65,
+    29.26,
+    175.16
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -63.8,
+    6.9,
+    -186.54
+   ],
+   "max": [
+    -58.93,
+    29.26,
+    -181.66
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    183.59,
+    30.89,
+    81.59
+   ],
+   "max": [
+    185.01,
+    31.29,
+    83.01
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    183.59,
+    30.89,
+    -17.98
+   ],
+   "max": [
+    185.01,
+    31.29,
+    -16.56
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -43.89,
+    -3.66,
+    78.03
+   ],
+   "max": [
+    -19.91,
+    2.84,
+    117.04
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    12.19,
+    8.13,
+    98.15
+   ],
+   "max": [
+    16.26,
+    27.64,
+    102.21
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    70.71,
+    -3.05,
+    110.13
+   ],
+   "max": [
+    73.96,
+    43.53,
+    113.39
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    19.91,
+    -3.66,
+    -117.04
+   ],
+   "max": [
+    43.89,
+    2.84,
+    -78.03
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    18.9,
+    6.91,
+    -102.21
+   ],
+   "max": [
+    22.96,
+    27.64,
+    -98.15
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -22.96,
+    6.91,
+    98.15
+   ],
+   "max": [
+    -18.9,
+    28.71,
+    102.21
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    -49.99,
+    10.16,
+    76.4
+   ],
+   "max": [
+    -45.92,
+    66.8,
+    80.47
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    -272.14,
+    27.39,
+    -49.17
+   ],
+   "max": [
+    -238.4,
+    39.83,
+    -15.44
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -180.12,
+    32.04,
+    -79.12
+   ],
+   "max": [
+    -178.7,
+    32.45,
+    -77.7
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -180.12,
+    32.04,
+    12.77
+   ],
+   "max": [
+    -178.7,
+    32.45,
+    14.2
+   ]
+  },
+  {
+   "kind": "midboss",
+   "entity": "trigger_midboss_shield",
+   "min": [
+    -16.26,
+    -19.51,
+    -9.55
+   ],
+   "max": [
+    16.26,
+    -3.25,
+    9.96
+   ]
+  },
+  {
+   "kind": "base",
+   "entity": "trigger_team_base",
+   "min": [
+    136.55,
+    13,
+    -9.75
+   ],
+   "max": [
+    276.35,
+    74.78,
+    87.78
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -66.65,
+    -3.25,
+    -117.04
+   ],
+   "max": [
+    -47.14,
+    5.69,
+    -35.76
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -66.65,
+    -3.25,
+    -151.18
+   ],
+   "max": [
+    -52.02,
+    5.69,
+    -117.04
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    52.02,
+    -3.25,
+    117.04
+   ],
+   "max": [
+    66.65,
+    5.28,
+    151.18
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    47.14,
+    -3.25,
+    35.76
+   ],
+   "max": [
+    66.65,
+    5.28,
+    117.04
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -33.32,
+    -3.25,
+    -136.96
+   ],
+   "max": [
+    -13,
+    5.69,
+    -98.35
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -49.58,
+    0,
+    -134.11
+   ],
+   "max": [
+    -47.14,
+    5.69,
+    -121.51
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    13,
+    -3.25,
+    99.97
+   ],
+   "max": [
+    48.36,
+    5.28,
+    121.92
+   ]
+  },
+  {
+   "kind": "base",
+   "entity": "trigger_team_base",
+   "min": [
+    -276.35,
+    13,
+    -74.78
+   ],
+   "max": [
+    -136.55,
+    74.78,
+    9.75
+   ]
+  },
+  {
+   "kind": "capture",
+   "entity": "citadel_capture_point",
+   "min": [
+    -8.13,
+    7.32,
+    -232.46
+   ],
+   "max": [
+    8.13,
+    12.19,
+    -216.2
+   ]
+  },
+  {
+   "kind": "capture",
+   "entity": "citadel_capture_point",
+   "min": [
+    -8.13,
+    6.5,
+    216.2
+   ],
+   "max": [
+    8.13,
+    11.38,
+    232.46
+   ]
+  },
+  {
+   "kind": "idol_return",
+   "entity": "citadel_trigger_idol_return",
+   "min": [
+    -2.44,
+    2.84,
+    -170.28
+   ],
+   "max": [
+    2.03,
+    9.35,
+    -164.59
+   ]
+  },
+  {
+   "kind": "idol_return",
+   "entity": "citadel_trigger_idol_return",
+   "min": [
+    -4.88,
+    2.84,
+    157.28
+   ],
+   "max": [
+    0,
+    9.35,
+    162.97
+   ]
+  },
+  {
+   "kind": "shop_tunnel",
+   "entity": "citadel_trigger_shop_tunnel",
+   "min": [
+    -48.77,
+    -3.25,
+    -108.71
+   ],
+   "max": [
+    -29.26,
+    5.69,
+    -98.35
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    28.45,
+    9.55,
+    -26.87
+   ],
+   "max": [
+    35.36,
+    12.8,
+    -18.85
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    -35.36,
+    9.55,
+    21.74
+   ],
+   "max": [
+    -28.45,
+    12.8,
+    29.77
+   ]
+  },
+  {
+   "kind": "teleport",
+   "entity": "citadel_trigger_teleport",
+   "min": [
+    44.09,
+    -3.66,
+    -100.58
+   ],
+   "max": [
+    46.94,
+    -0.41,
+    -97.74
+   ]
+  },
+  {
+   "kind": "teleport",
+   "entity": "citadel_trigger_teleport",
+   "min": [
+    -46.94,
+    -3.66,
+    97.74
+   ],
+   "max": [
+    -44.09,
+    -0.41,
+    100.58
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    46.13,
+    6.3,
+    220.57
+   ],
+   "max": [
+    53.04,
+    9.55,
+    228.6
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    41.45,
+    6.3,
+    -167.13
+   ],
+   "max": [
+    48.36,
+    9.55,
+    -159.11
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    -53.04,
+    6.3,
+    -228.6
+   ],
+   "max": [
+    -46.13,
+    9.55,
+    -220.57
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    -48.36,
+    6.3,
+    159.11
+   ],
+   "max": [
+    -41.45,
+    9.55,
+    167.13
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -60.85,
+    15.85,
+    112.27
+   ],
+   "max": [
+    -59.44,
+    16.26,
+    113.68
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    64.31,
+    16.15,
+    -109.63
+   ],
+   "max": [
+    65.74,
+    16.56,
+    -108.2
+   ]
+  },
+  {
+   "kind": "teleport",
+   "entity": "citadel_trigger_teleport",
+   "min": [
+    -72.14,
+    -3.25,
+    -92.46
+   ],
+   "max": [
+    -69.29,
+    0,
+    -89.61
+   ]
+  },
+  {
+   "kind": "teleport",
+   "entity": "citadel_trigger_teleport",
+   "min": [
+    69.29,
+    -3.25,
+    89.61
+   ],
+   "max": [
+    72.14,
+    0,
+    92.46
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -97.43,
+    16.33,
+    191.11
+   ],
+   "max": [
+    -96.01,
+    16.74,
+    192.53
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -18.59,
+    14.54,
+    -155.95
+   ],
+   "max": [
+    -17.18,
+    14.95,
+    -154.54
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    13.93,
+    14.68,
+    154.54
+   ],
+   "max": [
+    15.34,
+    15.09,
+    155.95
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -99.67,
+    14.63,
+    62.28
+   ],
+   "max": [
+    -98.25,
+    15.04,
+    63.7
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -52.73,
+    19.51,
+    45.62
+   ],
+   "max": [
+    -51.31,
+    19.91,
+    47.04
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    -32.11,
+    -3.66,
+    95.3
+   ],
+   "max": [
+    -25.2,
+    -0.41,
+    103.33
+   ]
+  },
+  {
+   "kind": "shop",
+   "entity": "trigger_item_shop",
+   "min": [
+    25.2,
+    -3.66,
+    -103.33
+   ],
+   "max": [
+    32.11,
+    -0.41,
+    -95.3
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    50.19,
+    17.17,
+    -45.39
+   ],
+   "max": [
+    51.61,
+    17.58,
+    -43.97
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    13.11,
+    16.66,
+    -60.85
+   ],
+   "max": [
+    14.52,
+    17.07,
+    -59.44
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    -15.17,
+    17.71,
+    60.02
+   ],
+   "max": [
+    -13.76,
+    18.12,
+    61.43
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    36.68,
+    8.13,
+    104.95
+   ],
+   "max": [
+    38.1,
+    8.53,
+    106.38
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    95.25,
+    21.04,
+    -213.8
+   ],
+   "max": [
+    96.65,
+    21.45,
+    -212.41
+   ]
+  },
+  {
+   "kind": "jumppad",
+   "entity": "trigger_catapult",
+   "min": [
+    78.85,
+    17.17,
+    -45.23
+   ],
+   "max": [
+    80.26,
+    17.58,
+    -43.82
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -279.6,
+    -6.5,
+    -84.53
+   ],
+   "max": [
+    -136.55,
+    84.53,
+    19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    136.55,
+    -6.5,
+    -19.51
+   ],
+   "max": [
+    279.6,
+    84.53,
+    84.53
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    136.55,
+    -6.5,
+    -123.55
+   ],
+   "max": [
+    208.08,
+    84.53,
+    -19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    94.28,
+    -6.5,
+    -227.58
+   ],
+   "max": [
+    162.56,
+    84.53,
+    -91.03
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -45.52,
+    -6.5,
+    -243.84
+   ],
+   "max": [
+    94.28,
+    84.53,
+    -159.31
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -162.56,
+    -6.5,
+    -234.09
+   ],
+   "max": [
+    -45.52,
+    84.53,
+    -149.56
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -178.82,
+    -6.5,
+    -149.56
+   ],
+   "max": [
+    -120.29,
+    84.53,
+    -84.53
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    13,
+    -6.5,
+    -159.31
+   ],
+   "max": [
+    94.28,
+    84.53,
+    -123.55
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    113.79,
+    -6.5,
+    84.53
+   ],
+   "max": [
+    178.82,
+    84.53,
+    149.56
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -94.28,
+    -6.5,
+    123.55
+   ],
+   "max": [
+    -13,
+    84.53,
+    159.31
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -208.08,
+    -6.5,
+    19.51
+   ],
+   "max": [
+    -136.55,
+    84.53,
+    123.55
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -162.56,
+    -6.5,
+    91.03
+   ],
+   "max": [
+    -94.28,
+    84.53,
+    227.58
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -94.28,
+    -6.5,
+    159.31
+   ],
+   "max": [
+    45.52,
+    84.53,
+    243.84
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    45.52,
+    -6.5,
+    149.56
+   ],
+   "max": [
+    162.56,
+    84.53,
+    234.09
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -52.02,
+    -6.5,
+    -68.28
+   ],
+   "max": [
+    0,
+    84.53,
+    19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -35.76,
+    -6.5,
+    19.51
+   ],
+   "max": [
+    0,
+    84.53,
+    68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    0,
+    -6.5,
+    -19.51
+   ],
+   "max": [
+    52.02,
+    84.53,
+    68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -136.55,
+    -6.5,
+    19.51
+   ],
+   "max": [
+    -65.02,
+    84.53,
+    91.03
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -126.8,
+    -6.5,
+    91.03
+   ],
+   "max": [
+    -13,
+    84.53,
+    123.55
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -30.89,
+    -6.5,
+    68.28
+   ],
+   "max": [
+    -13,
+    84.53,
+    91.03
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -35.76,
+    -6.5,
+    55.27
+   ],
+   "max": [
+    -22.76,
+    84.53,
+    68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    13,
+    -6.5,
+    -91.03
+   ],
+   "max": [
+    35.76,
+    84.53,
+    -68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    13,
+    -6.5,
+    -123.55
+   ],
+   "max": [
+    126.8,
+    84.53,
+    -91.03
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    22.76,
+    -6.5,
+    -68.28
+   ],
+   "max": [
+    35.76,
+    84.53,
+    -55.27
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    81.28,
+    -6.5,
+    -91.03
+   ],
+   "max": [
+    136.55,
+    84.53,
+    -19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    0,
+    -6.5,
+    -68.28
+   ],
+   "max": [
+    35.76,
+    84.53,
+    -19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    113.79,
+    -6.5,
+    68.28
+   ],
+   "max": [
+    136.55,
+    84.53,
+    84.53
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -136.55,
+    -6.5,
+    -84.53
+   ],
+   "max": [
+    -113.79,
+    84.53,
+    -68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    9.75,
+    -6.5,
+    68.28
+   ],
+   "max": [
+    113.79,
+    84.53,
+    149.56
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -13,
+    -6.5,
+    149.56
+   ],
+   "max": [
+    45.52,
+    84.53,
+    159.31
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -113.79,
+    -6.5,
+    -149.56
+   ],
+   "max": [
+    -9.75,
+    84.53,
+    -68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -120.29,
+    -6.5,
+    -149.56
+   ],
+   "max": [
+    -113.79,
+    84.53,
+    -97.54
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -120.29,
+    -6.5,
+    -97.54
+   ],
+   "max": [
+    -113.79,
+    84.53,
+    -84.53
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -45.52,
+    -6.5,
+    -159.31
+   ],
+   "max": [
+    -9.75,
+    84.53,
+    -149.56
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -13,
+    -6.5,
+    68.28
+   ],
+   "max": [
+    9.75,
+    84.53,
+    149.56
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -9.75,
+    -6.5,
+    -159.31
+   ],
+   "max": [
+    13,
+    84.53,
+    -68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -52.02,
+    -22.76,
+    -52.02
+   ],
+   "max": [
+    52.02,
+    -6.5,
+    52.02
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -136.55,
+    -6.5,
+    -68.28
+   ],
+   "max": [
+    -52.02,
+    84.53,
+    19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    52.02,
+    -6.5,
+    -19.51
+   ],
+   "max": [
+    136.55,
+    84.53,
+    68.28
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    35.76,
+    -6.5,
+    -91.03
+   ],
+   "max": [
+    48.77,
+    84.53,
+    -19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    48.77,
+    -6.5,
+    -91.03
+   ],
+   "max": [
+    81.28,
+    84.53,
+    -87.78
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    48.77,
+    -6.5,
+    -45.52
+   ],
+   "max": [
+    81.28,
+    84.53,
+    -19.51
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    48.77,
+    -6.5,
+    -87.78
+   ],
+   "max": [
+    81.28,
+    84.53,
+    -45.52
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -65.02,
+    -6.5,
+    19.51
+   ],
+   "max": [
+    -35.76,
+    84.53,
+    66.65
+   ]
+  },
+  {
+   "kind": "district",
+   "entity": "citadel_trigger_in_map_district",
+   "min": [
+    -65.02,
+    -6.5,
+    66.65
+   ],
+   "max": [
+    -30.89,
+    84.53,
+    91.03
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    51.21,
+    6.5,
+    -165.81
+   ],
+   "max": [
+    56.08,
+    26.82,
+    -160.93
+   ]
+  },
+  {
+   "kind": "rope",
+   "entity": "citadel_trigger_climb_rope",
+   "min": [
+    125.17,
+    11.34,
+    -46.94
+   ],
+   "max": [
+    130.05,
+    34.3,
+    -42.07
+   ]
+  }
+ ]
+}

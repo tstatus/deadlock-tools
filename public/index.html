@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midtown Box Router</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+  "three-mesh-bvh": "https://cdn.jsdelivr.net/npm/three-mesh-bvh@0.7.3/build/index.module.js"
+} }
+</script>
+</head>
+<body>
+<div id="app">
+  <aside id="panel">
+    <header>
+      <h1>Midtown Box Router</h1>
+      <div id="status">Loading map…</div>
+      <div id="progress" hidden><div></div></div>
+    </header>
+
+    <section id="presetSection">
+      <h2>Saved routes</h2>
+      <div class="row pfilter">
+        <select id="presetTeam"><option value="any">Any team</option><option value="amber">Hidden King (Amber)</option><option value="sapphire">Archmother (Sapphire)</option></select>
+        <select id="presetLane"></select>
+      </div>
+      <ul id="presetList"></ul>
+      <form id="presetForm" hidden>
+        <input id="presetName" placeholder="Name, e.g. Mid lane 3:00 box run">
+        <div class="row">
+          <select id="presetSaveTeam"><option value="amber">Hidden King</option><option value="sapphire">Archmother</option><option value="any">Any team</option></select>
+          <input id="presetSaveLane" list="presetLaneList" placeholder="Lane"><datalist id="presetLaneList"></datalist>
+        </div>
+        <div class="row buttons"><button type="submit" class="primary">Save</button><button type="button" id="presetCancel">Cancel</button></div>
+      </form>
+      <div class="row buttons quiet">
+        <button id="savePreset">Save current…</button>
+        <button id="exportPresets">Export</button>
+        <label class="file small"><input type="file" id="importPresets" accept=".json"><span>Import</span></label>
+      </div>
+    </section>
+    <section id="routeSection">
+      <h2 id="routeTitle">Route</h2>
+      <div class="row buttons top-actions">
+        <button id="solve" class="primary">Optimize route</button>
+        <button id="follow">Follow path</button>
+        <button id="clearRoute" title="Remove all stops from this route">Clear</button>
+      </div>
+      <button id="findBest" class="wide" title="Try every target as the start and find the routes that collect the most souls within the time limit">★ Find best start</button>
+      <ul id="bestList" class="best-list" hidden></ul>
+      <div id="rpSettings" class="cset">
+        <div class="crow"><label for="routeName">Name</label><input id="routeName" class="wide-in" maxlength="40"><span></span></div>
+        <div class="crow"><label for="startWhen">Starts</label>
+          <select id="startWhen"><option value="fixed">At game clock</option><option value="after">After previous route</option></select>
+          <span class="side"><span id="clockRow"><input id="startClock" title="Game clock (mm:ss)"></span><span id="gapRow" hidden><input type="number" id="gap" min="0" step="5" title="Seconds to wait after the previous route" placeholder="+s"></span></span></div>
+        <div class="crow"><label>Start</label><span id="startLabel" class="v"></span><button id="pickStart" class="side">Pick</button></div>
+        <div class="crow" id="startPrevRow"><span></span><label class="inline"><input type="checkbox" id="startPrev"> Use the previous route's end</label><span></span></div>
+        <div class="crow"><label for="endMode">Finish</label>
+          <select id="endMode"><option value="loop">Back at the start</option><option value="point">At a chosen point</option><option value="open">At the last stop</option></select><span></span></div>
+        <div class="crow" id="endRow" hidden><label>End</label><span id="endLabel" class="v"></span><button id="pickEnd" class="side">Pick</button></div>
+        <div class="crow"><label for="mode">Goal</label>
+          <select id="mode"><option value="all">Every target, fastest</option><option value="budget">Most value in (seconds)</option></select>
+          <span class="side" id="budgetRow" hidden><input type="number" id="budget" min="5" step="5" title="Time limit in seconds"></span></div>
+        <div class="crow"><label for="radius">Radius</label><input type="range" id="radius" min="0" max="300" step="5" title="Only targets within this distance of the start (left = whole map)">
+          <span class="side v" id="radiusVal"></span></div>
+      </div>
+      <div class="row small"><span id="boxCount"></span><button id="clearExcluded" class="link">Re-include all</button></div>
+      <div class="row buttons quiet">
+        <button id="exportRoute">Export plan</button>
+        <label class="file small"><input type="file" id="importRoute" accept=".json"><span>Import plan</span></label>
+        <button id="deleteRoute" class="link">Delete route</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Match</h2>
+      <div class="row">
+        <label for="hero">Hero</label>
+        <select id="hero">
+          <option value="normal">Standard hero</option>
+          <option value="tunnel">Tunnel hero (Rem, Rat King, Mo &amp; Krill, Calico)</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="spawnMode">Spawn timers</label>
+        <select id="spawnMode">
+          <option value="wait">Include boxes that spawn on the way (wait if early)</option>
+          <option value="now">Only boxes already up when the route starts</option>
+          <option value="ignore">Ignore timers (all boxes up)</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="runSpeed">Run speed incl. sprint (m/s)</label>
+        <input type="number" id="runSpeed" step="0.1">
+      </div>
+      <h3>Farm</h3>
+      <div id="typeToggles"></div>
+      <div class="row"><label for="grabNearby">Always take targets that add at most (s)</label><input type="number" id="grabNearby" min="0" step="0.5"></div>
+      <div id="campSettings">
+        <div class="row"><label for="campDps">Your camp DPS at 0:00</label><input type="number" id="campDps" min="10" step="10"></div>
+        <div class="row"><label for="campDpsPerMin">… plus per game minute</label><input type="number" id="campDpsPerMin" min="0" step="5"></div>
+        <p class="hint">Time-limited routes take a camp only when it pays more souls per second than the boxes it would replace, so faster clears mean more camps.</p>
+        <div class="row"><label for="sinnerTime">Time to break a Sinner's Sacrifice (s)</label><input type="number" id="sinnerTime" min="0" step="0.5"></div>
+        <div class="row"><label for="sinnerBuffs">Buffs per Sinner's Sacrifice (jackpot)</label><input type="number" id="sinnerBuffs" min="0" step="1"></div>
+      </div>
+      <div class="row"><label><input type="checkbox" id="ignoreIsolated"> Ignore isolated golden statues</label></div>
+      <div class="row" id="detourRow"><label for="statueDetour">Keep a statue only if it adds at most (s)</label><input type="number" id="statueDetour" min="0" step="0.5"></div>
+      <div class="row"><label><input type="checkbox" id="prioritizeTough"> Prioritize tough crates (double value in time-limited routes)</label></div>
+      <div class="row" id="buffValueRow">
+        <label for="buffValue">A buff is worth (souls, time-limited routes)</label>
+        <input type="number" id="buffValue" min="0" step="10">
+      </div>
+    </section>
+
+        <section>
+      <details>
+        <summary><h2 class="inline">Movement model</h2></summary>
+        <div class="row"><label for="wallClimb">Max wall climb (m, wall jump + double jump)</label><input type="number" id="wallClimb" step="0.5"></div>
+        <div class="row"><label for="wallClimbTime">Extra time per wall climb (s)</label><input type="number" id="wallClimbTime" step="0.1"></div>
+        <div class="row"><label for="maxJumpUp">Max height gained on a gap jump (m)</label><input type="number" id="maxJumpUp" step="0.5"></div>
+        <div class="row"><label for="maxGap">Max rooftop gap jump (m, level)</label><input type="number" id="maxGap" step="0.5"></div>
+        <p class="hint">Gap jumps get shorter the higher the landing and longer when landing lower. These three settings change which paths exist, so travel times are recomputed (about 40 s).</p>
+        <h3>Stamina</h3>
+        <div class="row"><label><input type="checkbox" id="useDash"> Dash-slide on runs whenever a charge is ready</label></div>
+        <div class="row"><label for="stamina">Stamina charges</label><input type="number" id="stamina" min="1" step="1"></div>
+        <div class="row"><label for="staminaRegen">Recharge per charge (s)</label><input type="number" id="staminaRegen" step="0.1"></div>
+        <div class="row"><label for="dashSpeed">Dash speed (m/s)</label><input type="number" id="dashSpeed" step="0.1"></div>
+        <div class="row"><label for="dashDistance">Distance per dash + slide (m)</label><input type="number" id="dashDistance" step="0.5"></div>
+        <div class="row"><label for="freeJumpUp">Climb without air jump (m)</label><input type="number" id="freeJumpUp" step="0.5"></div>
+        <div class="row"><label for="freeGap">Gap without dash jump (m)</label><input type="number" id="freeGap" step="0.5"></div>
+        <div class="row"><label><input type="checkbox" id="useDownDash"> Down dash on drops (half a charge)</label></div>
+        <div class="row"><label for="downDashMin">Down dash drops of at least (m)</label><input type="number" id="downDashMin" step="0.5"></div>
+        <div class="row"><label for="downDashCost">Down-dash descent (s per m)</label><input type="number" id="downDashCost" step="0.005"></div>
+        <p class="hint">Taller climbs use an air jump (1 stamina); longer gaps use a dash jump (2). Down dashes only happen when half a charge is spare. If you are short for a jump, the route waits for a recharge.</p>
+        <h3>Speeds</h3>
+        <div class="row"><label for="zipSpeed">Zipline speed (m/s)</label><input type="number" id="zipSpeed" step="0.5"></div>
+        <div class="row"><label for="latchTime">Zipline latch time (s)</label><input type="number" id="latchTime" step="0.1"></div>
+        <div class="row"><label for="zipCarry">Momentum after crouching off a zipline (m)</label><input type="number" id="zipCarry" step="1"></div>
+        <div class="row"><label for="ropeSpeed">Rope climb speed (m/s)</label><input type="number" id="ropeSpeed" step="0.5"></div>
+        <div class="row"><label for="jumpTime">Time per jump (s)</label><input type="number" id="jumpTime" step="0.05"></div>
+        <div class="row"><label for="climbCost">Jump-up cost (s per m)</label><input type="number" id="climbCost" step="0.05"></div>
+        <div class="row"><label for="dropCost">Plain fall (s per m)</label><input type="number" id="dropCost" step="0.02"></div>
+        <div class="row"><label for="rampCost">Stairs/ramp cost (s per m up)</label><input type="number" id="rampCost" step="0.02"></div>
+        <div class="row"><label for="fixedScale">Jump pad / teleporter time ×</label><input type="number" id="fixedScale" step="0.1"></div>
+        <div class="row"><label for="breakTime">Break + collect per box (s)</label><input type="number" id="breakTime" step="0.1"></div>
+        <div class="row"><label><input type="checkbox" id="useZip"> Ziplines</label><label><input type="checkbox" id="useRope"> Ropes</label></div>
+        <div class="row"><label><input type="checkbox" id="usePads"> Jump pads</label><label><input type="checkbox" id="useTeleport"> Teleporters</label></div>
+        <div class="row buttons"><button id="resetParams">Reset to defaults</button></div>
+      </details>
+    </section>
+
+    <section>
+      <details id="calibration">
+        <summary><h2 class="inline">Calibrate with in-game times</h2></summary>
+        <p class="hint">Run a route in game from its start, breaking each box in order. Stop the timer when the last box breaks (or when you reach the finish), then record the time here.</p>
+        <div class="row buttons"><button id="suggestTests">Suggest test runs</button></div>
+        <ol id="testList" class="plain"></ol>
+        <div class="row">
+          <label for="measured">Measured time for this route (s)</label>
+          <input type="number" id="measured" step="0.1" min="0">
+          <button id="addSample">Record</button>
+        </div>
+        <table id="samples"></table>
+        <div class="row buttons">
+          <button id="fitParams" class="primary">Fit movement model</button>
+          <button id="exportSamples">Export</button>
+          <label class="file small"><input type="file" id="importSamples" accept=".json"><span>Import</span></label>
+        </div>
+        <div id="fitResult" class="hint"></div>
+      </details>
+    </section>
+
+    <section>
+      <h2>View</h2>
+      <div id="landmarkToggles"></div>
+      <div class="row buttons">
+        <button id="topView">Top-down</button>
+        <button id="resetView">Reset camera</button>
+      </div>
+      <p class="hint">Drag to orbit, right-drag to pan, wheel to zoom. <b>Right-click</b> the map to start or end the route there. <b>WASD</b> moves, <b>Q/E</b> down/up, hold <b>Shift</b> for speed. <b>Follow path</b> flies along the route: <b>→/↓</b> next stop, <b>←/↑</b> previous, <b>Esc</b> to stop.</p>
+    </section>
+  </aside>
+  <main id="viewport">
+    <div id="tooltip" hidden></div>
+    <div id="routePanel">
+      <div class="rp-head">
+        <span class="rp-title">Routes</span>
+        <button id="rpAdd" title="Add a follow-up route; boxes broken earlier come back after their respawn timer">+ Route</button>
+      </div>
+      <div id="rpRoutes" class="rp-list"></div>
+    </div>
+    <div id="boxMenu" hidden></div>
+    <div id="viewTools">
+      <label title="Dissolve buildings between the camera and the point you are looking at"><input type="checkbox" id="cutaway"> Cutaway</label>
+      <input type="range" id="cutRadius" min="4" max="120" step="1" title="Cutaway size">
+      <span class="sep"></span>
+      <label for="slice">Hide above</label>
+      <input type="range" id="slice" min="0" max="1" step="0.001" value="1" title="Hide everything above this height">
+      <span class="sep"></span>
+      <label title="Draw boxes and the route faintly through walls"><input type="checkbox" id="xray"> Through walls</label>
+    </div>
+    <div id="pickHint" hidden></div>
+    <div id="legend"></div>
+    <canvas id="minimap" title="Click to move the camera there"></canvas>
+    <div id="mmTools"><button id="mmFull" title="Show the whole map">Whole map</button><button id="mmTeam" title="Put your team's base at the bottom of the minimap and top-down view"></button></div>
+    <div id="followHud" hidden></div>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
