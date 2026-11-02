@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { toGL, S2M, worldMatrices, openBuffers, readAccessor } from "./gltf.mjs";
-import { C, EC, EDGE, DEFAULT_PARAMS, moveAllowed } from "../public/nav-core.js";
+import { C, EC, EDGE, DEFAULT_PARAMS, moveAllowed } from "../../site/router/nav-core.js";
 
 const [srcDir, dataDir, hullArg] = process.argv.slice(2);
 if (!srcDir || !dataDir) { console.error("usage: node build-nav.mjs <export dir> <data dir> [hull]"); process.exit(1); }

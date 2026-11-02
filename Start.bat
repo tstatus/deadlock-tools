@@ -1,6 +1,6 @@
 @echo off
-rem Starts the Midtown Box Router and opens it in your browser.
-rem Keep this window open while you use the router; close it to stop.
+rem Starts Deadlock Tools and opens it in your browser.
+rem Keep this window open while you use the site; close it to stop.
 cd /d "%~dp0"
 where node >nul 2>nul
 if errorlevel 1 (

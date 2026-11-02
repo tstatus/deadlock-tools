@@ -5,7 +5,7 @@
 // Usage: node tools/build-matrix.mjs <data dir>
 import fs from "node:fs";
 import path from "node:path";
-import { loadNav, buildMatrix, DEFAULT_PARAMS, structuralKey, NC } from "../public/nav-core.js";
+import { loadNav, buildMatrix, DEFAULT_PARAMS, structuralKey, NC } from "../../site/router/nav-core.js";
 
 const dataDir = process.argv[2];
 if (!dataDir) { console.error("usage: node build-matrix.mjs <data dir>"); process.exit(1); }
